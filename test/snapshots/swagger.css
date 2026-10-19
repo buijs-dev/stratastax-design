@@ -1,0 +1,188 @@
+/* Stratastax theme for Swagger UI (always light).
+ * Generated from stratastax.tokens.yaml by stratastax-design (scripts/export.mjs); do not edit. */
+
+html .swagger-ui,
+html .swagger-ui .info .title,
+html .swagger-ui .opblock-tag,
+html .swagger-ui .opblock .opblock-summary-description,
+html .swagger-ui .opblock .opblock-summary-path,
+html .swagger-ui table thead tr td,
+html .swagger-ui table thead tr th,
+html .swagger-ui .parameter__name,
+html .swagger-ui .response-col_status,
+html .swagger-ui .model-title,
+html .swagger-ui .model,
+html .swagger-ui label,
+html .swagger-ui .tab li {
+  color: #20243A;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html .swagger-ui {
+  background: #FFFFFF;
+}
+
+html .swagger-ui .info .title,
+html .swagger-ui .opblock-tag {
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html .swagger-ui .opblock-tag {
+  border-bottom-color: #E0E3F2;
+}
+
+html .swagger-ui .info a,
+html .swagger-ui a.nostyle,
+html .swagger-ui .info .link {
+  color: #4F46E5;
+}
+
+html .swagger-ui .markdown p,
+html .swagger-ui .renderedMarkdown p,
+html .swagger-ui .parameter__type,
+html .swagger-ui .prop-format,
+html .swagger-ui .response-col_description {
+  color: #565C7E;
+}
+
+html .swagger-ui code,
+html .swagger-ui .microlight,
+html .swagger-ui .opblock .opblock-summary-path {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html .swagger-ui .scheme-container {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E3F2;
+  box-shadow: none;
+}
+
+html .swagger-ui .opblock {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+html .swagger-ui .opblock .opblock-summary-method {
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html .swagger-ui .opblock .opblock-section-header,
+html .swagger-ui section.models .model-container,
+html .swagger-ui .model-box {
+  background: #EEF0FB;
+  box-shadow: none;
+}
+
+html .swagger-ui section.models {
+  border-color: #E0E3F2;
+  border-radius: 8px;
+}
+
+html .swagger-ui .btn {
+  border-radius: 8px;
+  box-shadow: none;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html .swagger-ui .btn.authorize {
+  border-color: #4F46E5;
+  color: #4F46E5;
+}
+
+html .swagger-ui .btn.authorize svg {
+  fill: #4F46E5;
+}
+
+html .swagger-ui .btn.execute {
+  background: #4F46E5;
+  border-color: #4F46E5;
+  color: #FFFFFF;
+}
+
+html .swagger-ui input[type='text'],
+html .swagger-ui input[type='password'],
+html .swagger-ui input[type='search'],
+html .swagger-ui textarea,
+html .swagger-ui select {
+  border: 1px solid #E0E3F2;
+  border-radius: 8px;
+  box-shadow: none;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html .swagger-ui :is(input, textarea, select, button):focus-visible {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+html .swagger-ui .opblock.opblock-get {
+  border-color: #0F766E;
+  background: #E6FAF7;
+}
+
+html .swagger-ui .opblock.opblock-get .opblock-summary {
+  border-color: #0F766E;
+}
+
+html .swagger-ui .opblock.opblock-get .opblock-summary-method,
+html .swagger-ui .opblock.opblock-get .tab-header .tab-item.active h4 span::after {
+  background: #0F766E;
+}
+
+html .swagger-ui .opblock.opblock-post {
+  border-color: #4F46E5;
+  background: #EEF0FF;
+}
+
+html .swagger-ui .opblock.opblock-post .opblock-summary {
+  border-color: #4F46E5;
+}
+
+html .swagger-ui .opblock.opblock-post .opblock-summary-method,
+html .swagger-ui .opblock.opblock-post .tab-header .tab-item.active h4 span::after {
+  background: #4F46E5;
+}
+
+html .swagger-ui .opblock.opblock-put {
+  border-color: #7C3AED;
+  background: #F3EEFF;
+}
+
+html .swagger-ui .opblock.opblock-put .opblock-summary {
+  border-color: #7C3AED;
+}
+
+html .swagger-ui .opblock.opblock-put .opblock-summary-method,
+html .swagger-ui .opblock.opblock-put .tab-header .tab-item.active h4 span::after {
+  background: #7C3AED;
+}
+
+html .swagger-ui .opblock.opblock-patch {
+  border-color: #7C3AED;
+  background: #F3EEFF;
+}
+
+html .swagger-ui .opblock.opblock-patch .opblock-summary {
+  border-color: #7C3AED;
+}
+
+html .swagger-ui .opblock.opblock-patch .opblock-summary-method,
+html .swagger-ui .opblock.opblock-patch .tab-header .tab-item.active h4 span::after {
+  background: #7C3AED;
+}
+
+html .swagger-ui .opblock.opblock-delete {
+  border-color: #DC2626;
+  background: #FEF2F2;
+}
+
+html .swagger-ui .opblock.opblock-delete .opblock-summary {
+  border-color: #DC2626;
+}
+
+html .swagger-ui .opblock.opblock-delete .opblock-summary-method,
+html .swagger-ui .opblock.opblock-delete .tab-header .tab-item.active h4 span::after {
+  background: #DC2626;
+}

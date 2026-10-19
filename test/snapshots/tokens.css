@@ -1,0 +1,111 @@
+/* Stratastax design tokens: CSS custom properties and the shadcn/ui variables.
+ * Generated from stratastax.tokens.yaml by stratastax-design (scripts/export.mjs); do not edit. */
+
+:root {
+  --stx-primary: #4F46E5;
+  --stx-on-primary: #FFFFFF;
+  --stx-secondary: #14B8A6;
+  --stx-on-secondary: #20243A;
+  --stx-success: #0F766E;
+  --stx-on-success: #FFFFFF;
+  --stx-warning: #D97706;
+  --stx-on-warning: #141729;
+  --stx-danger: #DC2626;
+  --stx-on-danger: #FFFFFF;
+  --stx-background: #F8F9FF;
+  --stx-on-background: #20243A;
+  --stx-surface: #FFFFFF;
+  --stx-on-surface: #20243A;
+  --stx-muted: #565C7E;
+  --stx-border: #E0E3F2;
+  --stx-focus: #8B5CF6;
+  --stx-transparent: #00000000;
+  --stx-subtle: #EEF0FB;
+  --stx-secondary-strong: #0F766E;
+  --stx-accent: #F97360;
+  --stx-on-accent: #20243A;
+  --stx-highlight: #7C3AED;
+  --stx-on-highlight: #FFFFFF;
+  --stx-primary-subtle: #EEF0FF;
+  --stx-secondary-subtle: #E6FAF7;
+  --stx-accent-subtle: #FFF0EC;
+  --stx-highlight-subtle: #F3EEFF;
+  --stx-warning-subtle: #FFF7E6;
+  --stx-danger-subtle: #FEF2F2;
+  --stx-gradient-brand: linear-gradient(135deg, #4F46E5, #8B5CF6);
+  --stx-radius-none: 0px;
+  --stx-radius-sm: 6px;
+  --stx-radius-md: 8px;
+  --stx-radius-lg: 12px;
+  --stx-radius-full: 9999px;
+  --stx-space-none: 0px;
+  --stx-space-xs: 4px;
+  --stx-space-sm: 8px;
+  --stx-space-md: 16px;
+  --stx-space-lg: 24px;
+  --stx-space-xl: 32px;
+  --stx-space-x2l: 48px;
+  --stx-space-x3l: 64px;
+  --stx-font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --stx-font-heading: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --stx-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+:root[data-theme='dark'], .dark {
+  --stx-primary: #818CF8;
+  --stx-on-primary: #141729;
+  --stx-secondary: #2DD4BF;
+  --stx-on-secondary: #141729;
+  --stx-success: #2DD4BF;
+  --stx-on-success: #141729;
+  --stx-warning: #FCD34D;
+  --stx-on-warning: #141729;
+  --stx-danger: #F87171;
+  --stx-on-danger: #141729;
+  --stx-background: #11142A;
+  --stx-on-background: #E8EAF7;
+  --stx-surface: #171B34;
+  --stx-on-surface: #E8EAF7;
+  --stx-muted: #9AA0BC;
+  --stx-border: #272B44;
+  --stx-focus: #A78BFA;
+  --stx-transparent: #00000000;
+  --stx-subtle: #272B44;
+  --stx-secondary-strong: #2DD4BF;
+  --stx-accent: #FB8A78;
+  --stx-on-accent: #141729;
+  --stx-highlight: #A78BFA;
+  --stx-on-highlight: #141729;
+  --stx-primary-subtle: #23274B;
+  --stx-secondary-subtle: #153342;
+  --stx-accent-subtle: #362736;
+  --stx-highlight-subtle: #29274B;
+  --stx-warning-subtle: #373330;
+  --stx-danger-subtle: #362335;
+  --stx-gradient-brand: linear-gradient(135deg, #818CF8, #A78BFA);
+}
+
+/* shadcn/ui */
+:root,
+:root[data-theme='dark'], .dark {
+  --background: var(--stx-background);
+  --foreground: var(--stx-on-background);
+  --card: var(--stx-surface);
+  --card-foreground: var(--stx-on-surface);
+  --popover: var(--stx-surface);
+  --popover-foreground: var(--stx-on-surface);
+  --primary: var(--stx-primary);
+  --primary-foreground: var(--stx-on-primary);
+  --secondary: var(--stx-secondary);
+  --secondary-foreground: var(--stx-on-secondary);
+  --muted: var(--stx-subtle);
+  --muted-foreground: var(--stx-muted);
+  --accent: var(--stx-subtle);
+  --accent-foreground: var(--stx-on-background);
+  --destructive: var(--stx-danger);
+  --destructive-foreground: var(--stx-on-danger);
+  --border: var(--stx-border);
+  --input: var(--stx-border);
+  --ring: var(--stx-focus);
+  --radius: var(--stx-radius-md);
+}

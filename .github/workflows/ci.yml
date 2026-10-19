@@ -1,0 +1,47 @@
+name: CI
+
+# Tests the tokens (contrast, resolution, snapshots of the export) on every change, and after a push
+# to main asks stratastax-horizon to rebuild docs.stratastax.dev, which publishes the export.
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Export
+        run: npm run export
+
+  notify:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rebuild docs.stratastax.dev
+        uses: buijs-dev/ci-templates/.github/actions/notify-repository@main
+        with:
+          token: ${{ secrets.DOCS_DISPATCH_TOKEN }}
+          repository: buijs-dev/stratastax-horizon
+          event-type: design-updated
+          client-payload: '{"sha": "${{ github.sha }}"}'

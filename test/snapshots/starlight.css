@@ -1,0 +1,98 @@
+/* Stratastax theme for Starlight. Load after tokens.css.
+ * Generated from stratastax.tokens.yaml by stratastax-design (scripts/export.mjs); do not edit. */
+
+:root {
+  --stx-ink-50: #F8F9FF;
+  --stx-ink-100: #EEF0FB;
+  --stx-ink-200: #E0E3F2;
+  --stx-ink-300: #C7CBE0;
+  --stx-ink-400: #9AA0BC;
+  --stx-ink-500: #6B7193;
+  --stx-ink-600: #565C7E;
+  --stx-ink-700: #363B57;
+  --stx-ink-800: #272B44;
+  --stx-ink-900: #20243A;
+  --stx-ink-950: #141729;
+}
+
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+  --sl-color-accent-low: var(--stx-primary-subtle);
+  --sl-color-accent: var(--stx-primary);
+  --sl-color-accent-high: var(--stx-on-background);
+  --sl-color-text: var(--stx-on-background);
+  --sl-color-text-accent: var(--stx-primary);
+  --sl-color-text-invert: var(--stx-on-primary);
+  --sl-color-bg: var(--stx-background);
+  --sl-color-bg-nav: var(--stx-surface);
+  --sl-color-bg-sidebar: var(--stx-background);
+  --sl-color-bg-inline-code: var(--stx-subtle);
+  --sl-color-bg-accent: var(--stx-primary);
+  --sl-color-hairline: var(--stx-border);
+  --sl-color-hairline-light: var(--stx-border);
+  --sl-color-hairline-shade: var(--stx-border);
+  --sl-color-backdrop-overlay: color-mix(in srgb, var(--stx-on-background) 40%, transparent);
+  --sl-color-blue-low: var(--stx-primary-subtle);
+  --sl-color-blue: var(--stx-primary);
+  --sl-color-blue-high: var(--stx-on-background);
+  --sl-color-purple-low: var(--stx-secondary-subtle);
+  --sl-color-purple: var(--stx-secondary);
+  --sl-color-purple-high: var(--stx-on-background);
+  --sl-color-green-low: var(--stx-secondary-subtle);
+  --sl-color-green: var(--stx-success);
+  --sl-color-green-high: var(--stx-on-background);
+  --sl-color-orange-low: var(--stx-warning-subtle);
+  --sl-color-orange: var(--stx-warning);
+  --sl-color-orange-high: var(--stx-on-background);
+  --sl-color-red-low: var(--stx-danger-subtle);
+  --sl-color-red: var(--stx-danger);
+  --sl-color-red-high: var(--stx-on-background);
+  --sl-font: var(--stx-font-sans);
+  --sl-font-system: var(--stx-font-sans);
+  --sl-font-mono: var(--stx-font-mono);
+  --sl-font-system-mono: var(--stx-font-mono);
+}
+
+:root,
+:root[data-theme='light'] {
+  --sl-color-white: var(--stx-ink-900);
+  --sl-color-gray-1: var(--stx-ink-800);
+  --sl-color-gray-2: var(--stx-ink-700);
+  --sl-color-gray-3: var(--stx-ink-600);
+  --sl-color-gray-4: var(--stx-ink-500);
+  --sl-color-gray-5: var(--stx-ink-300);
+  --sl-color-gray-6: var(--stx-ink-100);
+  --sl-color-gray-7: var(--stx-ink-50);
+  --sl-color-black: var(--stx-background);
+}
+
+:root[data-theme='dark'] {
+  --sl-color-white: var(--stx-ink-50);
+  --sl-color-gray-1: var(--stx-ink-100);
+  --sl-color-gray-2: var(--stx-ink-200);
+  --sl-color-gray-3: var(--stx-ink-400);
+  --sl-color-gray-4: var(--stx-ink-500);
+  --sl-color-gray-5: var(--stx-ink-700);
+  --sl-color-gray-6: var(--stx-ink-800);
+  --sl-color-gray-7: var(--stx-ink-900);
+  --sl-color-black: var(--stx-background);
+}
+
+.site-title,
+.sl-markdown-content :is(h1, h2, h3, h4),
+h1#_top {
+  font-family: var(--stx-font-heading);
+  letter-spacing: -0.01em;
+}
+
+/* The active page in the sidebar: a primary fill, as in shadcn. */
+.sidebar-content a[aria-current='page'] {
+  background: var(--stx-primary);
+  color: var(--stx-on-primary);
+}
+
+.starlight-aside {
+  border-radius: var(--stx-radius-md);
+  border-inline-start-width: 3px;
+}
