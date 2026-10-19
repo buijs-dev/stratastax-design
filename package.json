@@ -1,0 +1,15 @@
+{
+  "name": "stratastax-design",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Stratastax design system: one token source for Flutter, Starlight and Swagger UI",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "export": "node scripts/export.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "yaml": "2.9.1"
+  }
+}

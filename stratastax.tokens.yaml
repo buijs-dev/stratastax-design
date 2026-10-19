@@ -1,0 +1,114 @@
+# The Stratastax design tokens: the calm of shadcn/ui (quiet neutrals, 1px borders, little shadow,
+# compact type) with a livelier identity from a few vivid colours, used sparingly.
+#
+# The format is the stx.tokens.yaml of stratastax-flutter (primitives -> color -> components), so the
+# same file is the brand layer of every Stratastax app: stx_style defaults <- this file <- the app.
+# scripts/export.mjs turns it into CSS (shadcn variables, Starlight, Swagger UI) and DTCG JSON.
+# Every slot is set here, so the file is complete on its own.
+#
+# Rules of use (see README.md):
+#   - primary (indigo) is for actions, links and focus; secondary (teal) for secondary actions and
+#     positive data; accent (coral) and highlight (violet) are decoration: at most one coral accent
+#     and one gradient per screen;
+#   - coral is never an error: danger is red;
+#   - vivid fills carry ink text, except primary, the strong variants and danger, which carry white.
+modes: [light, dark]
+
+primitives:
+  palette:
+    # Neutrals with a slight indigo tint instead of zinc.
+    ink:    { 50: '#F8F9FF', 100: '#EEF0FB', 200: '#E0E3F2', 300: '#C7CBE0', 400: '#9AA0BC', 500: '#6B7193', 600: '#565C7E', 700: '#363B57', 800: '#272B44', 900: '#20243A', 950: '#141729' }
+    night:  { bg: '#11142A', surface: '#171B34', fg: '#E8EAF7' }
+    indigo: { 50: '#EEF0FF', 400: '#818CF8', 600: '#4F46E5', 900: '#312E81', tint: '#23274B' }
+    teal:   { 50: '#E6FAF7', 400: '#2DD4BF', 500: '#14B8A6', 700: '#0F766E', tint: '#153342' }
+    coral:  { 50: '#FFF0EC', 400: '#FB8A78', 500: '#F97360', tint: '#362736' }
+    violet: { 50: '#F3EEFF', 400: '#A78BFA', 500: '#8B5CF6', 600: '#7C3AED', tint: '#29274B' }
+    red:    { 50: '#FEF2F2', 400: '#F87171', 600: '#DC2626', tint: '#362335' }
+    amber:  { 50: '#FFF7E6', 300: '#FCD34D', 600: '#D97706', tint: '#373330' }
+    white:  '#FFFFFF'
+  unit: 4
+  font:
+    sans: Inter
+    heading: Plus Jakarta Sans
+    mono: JetBrains Mono
+
+color:
+  primary:      { light: '{palette.indigo.600}', dark: '{palette.indigo.400}' }
+  onPrimary:    { light: '{palette.white}', dark: '{palette.ink.950}' }
+  secondary:    { light: '{palette.teal.500}', dark: '{palette.teal.400}' }
+  onSecondary:  { light: '{palette.ink.900}', dark: '{palette.ink.950}' }
+  success:      { light: '{palette.teal.700}', dark: '{palette.teal.400}' }
+  onSuccess:    { light: '{palette.white}', dark: '{palette.ink.950}' }
+  warning:      { light: '{palette.amber.600}', dark: '{palette.amber.300}' }
+  onWarning:    { light: '{palette.ink.950}', dark: '{palette.ink.950}' }
+  danger:       { light: '{palette.red.600}', dark: '{palette.red.400}' }
+  onDanger:     { light: '{palette.white}', dark: '{palette.ink.950}' }
+  background:   { light: '{palette.ink.50}', dark: '{palette.night.bg}' }
+  onBackground: { light: '{palette.ink.900}', dark: '{palette.night.fg}' }
+  surface:      { light: '{palette.white}', dark: '{palette.night.surface}' }
+  onSurface:    { light: '{palette.ink.900}', dark: '{palette.night.fg}' }
+  muted:        { light: '{palette.ink.600}', dark: '{palette.ink.400}' }
+  border:       { light: '{palette.ink.200}', dark: '{palette.ink.800}' }
+  focus:        { light: '{palette.violet.500}', dark: '{palette.violet.400}' }
+  transparent:  '#00000000'
+  extend:
+    # A quiet fill for hovers, code and table headers (shadcn's "muted" background).
+    subtle:          { light: '{palette.ink.100}', dark: '{palette.ink.800}' }
+    # Teal as text or with white text (#14B8A6 itself is too light for that).
+    secondaryStrong: { light: '{palette.teal.700}', dark: '{palette.teal.400}' }
+    accent:          { light: '{palette.coral.500}', dark: '{palette.coral.400}' }
+    onAccent:        { light: '{palette.ink.900}', dark: '{palette.ink.950}' }
+    highlight:       { light: '{palette.violet.600}', dark: '{palette.violet.400}' }
+    onHighlight:     { light: '{palette.white}', dark: '{palette.ink.950}' }
+    # Subtle colour fields for callouts, cards and bands, always with ink text.
+    primarySubtle:   { light: '{palette.indigo.50}', dark: '{palette.indigo.tint}' }
+    secondarySubtle: { light: '{palette.teal.50}', dark: '{palette.teal.tint}' }
+    accentSubtle:    { light: '{palette.coral.50}', dark: '{palette.coral.tint}' }
+    highlightSubtle: { light: '{palette.violet.50}', dark: '{palette.violet.tint}' }
+    warningSubtle:   { light: '{palette.amber.50}', dark: '{palette.amber.tint}' }
+    dangerSubtle:    { light: '{palette.red.50}', dark: '{palette.red.tint}' }
+
+# Not read by stx_style: the brand gradient for the web (hero, accent stripe, active indicator).
+gradient:
+  brand: { angle: 135, from: { light: '{palette.indigo.600}', dark: '{palette.indigo.400}' }, to: { light: '{palette.violet.500}', dark: '{palette.violet.400}' } }
+
+space: { none: 0, xs: 1, sm: 2, md: 4, lg: 6, xl: 8, x2l: 12, x3l: 16 }   # × unit
+radius: { none: 0, sm: 6, md: 8, lg: 12, full: 9999 }
+breakpoints: { sm: 640, md: 768, lg: 1024, xl: 1280 }
+
+text:
+  header1: { family: heading, weight: 800, lineHeight: 1.15, letterSpacing: -0.75, size: { base: 30, lg: 36 } }
+  header2: { family: heading, weight: 700, lineHeight: 1.2, letterSpacing: -0.5, size: { base: 24, lg: 30 } }
+  header3: { family: heading, weight: 600, lineHeight: 1.3, letterSpacing: -0.25, size: 18 }
+  body:    { family: sans, weight: 400, lineHeight: 1.5, size: 14 }
+  label:   { family: sans, weight: 500, lineHeight: 1.4, size: 14 }
+  caption: { family: sans, weight: 400, lineHeight: 1.4, size: 12 }
+
+components:
+  button:
+    base:      { padding: { x: md, y: sm }, radius: md, text: label, minHeight: 36 }
+    primary:   { background: primary, foreground: onPrimary }
+    secondary: { background: secondary, foreground: onSecondary }
+    danger:    { background: danger, foreground: onDanger }
+    ghost:     { background: transparent, foreground: onBackground }
+    extend:
+      accent:  { background: accent, foreground: onAccent }
+      outline: { background: transparent, foreground: onBackground, border: border }
+  field:
+    background: surface
+    foreground: onSurface
+    placeholder: muted
+    border: border
+    borderFocus: focus
+    borderError: danger
+    padding: { x: md, y: sm }
+    radius: md
+    text: body
+    label: label
+    message: caption
+    gap: sm
+    borderWidth: 1
+  focus:
+    color: focus
+    width: 2
+    offset: 2
